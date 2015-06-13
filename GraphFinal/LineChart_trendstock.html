@@ -33,13 +33,7 @@
 
 <body>
   <svg height="15" width="700">
-    <text x="20" y="5" fill="black" font-family="Roboto2" font-size="16px" font-weight = "bold">Stock Prices from May 2014 to April 2015</text>
-	 <svg height="15" width="700">
-    <text x="20" y="12" fill="black" font-family="Roboto2" font-size="16px" font-weight = "bold">Average analysis of the stock price from May 2014 to April 2015</text>
-	</svg>
-	
-	<svg xmlns="http://www.w3.org/2000/svg">
-	<rect x="10" y="20" height="300" width="300" fill="green"/>
+    <text x="20" y="12" fill="black" font-family="Roboto2" font-size="18px" font-weight = "bold">Stock Prices from May 2014 to April 2015</text>
 	</svg>
 	
 
@@ -147,23 +141,33 @@
                         .orient("left");
 
 						vis.append("text")
+							.attr("x", 300)             
+							.attr("y", 10)
+							.attr("fill","black")
+							.attr("text-anchor", "middle")  
+							.attr("font-family", "Roboto2")
+							.style("font-size", "14px") 
+							.style("text-decoration", "underline")
+							.text("Average analysis of the stock price from May 2014 to April 2015");						
+						
+						vis.append("text")
 							.attr("x", 550)             
 							.attr("y", 40)
 							.attr("fill","green")
 							.attr("text-anchor", "middle")  
 							.attr("font-family", "Roboto2")
 							.attr("font-weight", "bold")
-							.style("font-size", "20px") 
+							.style("font-size", "18px") 
 							.text("Google");
 							
-					vis.append("text")
+						vis.append("text")
 							.attr("x", 550)             
 							.attr("y", 520)
 							.attr("fill","darkmagenta")
 							.attr("text-anchor", "middle")  
 							.attr("font-family", "Roboto2")
 							.attr("font-weight", "bold")
-							.style("font-size", "20px") 
+							.style("font-size", "18px") 
 							.text("Yahoo");
                  
                     vis.append("svg:g")
@@ -181,7 +185,8 @@
                       .append("text")
                       .attr("y", MARGINS.right+10)
                       .attr("dy", ".10em")
-                      .style("font-size","14px")
+					  .attr("font-family","Roboto2")
+                      .style("font-size","13px")
                       .style("text-anchor", "end")
                       .attr("class", "shadow")
                       .style("font-weight", "bold")
@@ -190,9 +195,10 @@
                    vis.append("g")
                       .attr("class", "x axis")
                        .append("text")
-                       .attr("x", WIDTH-400)
+                       .attr("x", WIDTH-430)
                        .attr("y", HEIGHT)
-                       .style("font-size","14px")
+					   .attr("font-family","Roboto2")
+                       .style("font-size","13px")
                        .style("text-anchor", "left")
                        .style("font-weight", "bold")
                       .text("Month-Year");
