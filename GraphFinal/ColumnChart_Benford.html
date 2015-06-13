@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["bar"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Digito', 'Sample Rate', 'Benford Rate'],
+          ['1', 0.44, 0.30],
+          ['2', 0.2, 0.18],
+          ['3', 0.22, 0.12],
+          ['4', 0.08, 0.10],
+          ['5', 0.03, 0.08],
+          ['6', 0.01, 0.07],
+          ['7', 0.00, 0.06],
+          ['8', 0.01, 0.05],
+          ['9', 0.01, 0.05],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Benford Law',
+            subtitle: 'Analysis of the first digit of the stock prices of Yahoo since 1996 to 2015',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
