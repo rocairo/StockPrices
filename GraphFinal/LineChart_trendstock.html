@@ -7,7 +7,6 @@
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Roboto2:bold,regular,italic,thin,light,bolditalic,black,medium&lang=en' rel='stylesheet' type='text/css'>
 
     <style>
         .axis path {
@@ -16,8 +15,8 @@
             shape-rendering: crispEdges;
         }
         .axis text {
-            font-family: Roboto2;
-            font-size: 14px;
+            font-family: sans-serif;
+            font-size: 11px;
         }
       .grid .tick {
           stroke: lightgrey;
@@ -33,7 +32,7 @@
 
 <body>
   <svg height="15" width="700">
-    <text x="20" y="12" fill="black" font-family="Roboto2" font-size="18px" font-weight = "bold">Stock Prices from May 2014 to April 2015</text>
+    <text x="20" y="12" fill="black" font-family="sans-serif" font-size="14px" font-weight = "bold">Stock Prices from May 2014 to April 2015</text>
 	</svg>
 	
 
@@ -145,8 +144,8 @@
 							.attr("y", 10)
 							.attr("fill","black")
 							.attr("text-anchor", "middle")  
-							.attr("font-family", "Roboto2")
-							.style("font-size", "14px") 
+							.attr("font-family", "sans-serif")
+							.style("font-size", "12px") 
 							.style("text-decoration", "underline")
 							.text("Average analysis of the stock price from May 2014 to April 2015");						
 						
@@ -155,19 +154,19 @@
 							.attr("y", 40)
 							.attr("fill","green")
 							.attr("text-anchor", "middle")  
-							.attr("font-family", "Roboto2")
+							.attr("font-family", "sans-serif")
 							.attr("font-weight", "bold")
-							.style("font-size", "18px") 
+							.style("font-size", "12px") 
 							.text("Google");
 							
 						vis.append("text")
 							.attr("x", 550)             
 							.attr("y", 520)
-							.attr("fill","darkmagenta")
+							.attr("fill","indigo")
 							.attr("text-anchor", "middle")  
-							.attr("font-family", "Roboto2")
+							.attr("font-family", "sans-serif")
 							.attr("font-weight", "bold")
-							.style("font-size", "18px") 
+							.style("font-size", "12px") 
 							.text("Yahoo");
                  
                     vis.append("svg:g")
@@ -185,8 +184,8 @@
                       .append("text")
                       .attr("y", MARGINS.right+10)
                       .attr("dy", ".10em")
-					  .attr("font-family","Roboto2")
-                      .style("font-size","13px")
+					  .attr("font-family","sans-serif")
+                      .style("font-size","12px")
                       .style("text-anchor", "end")
                       .attr("class", "shadow")
                       .style("font-weight", "bold")
@@ -197,8 +196,8 @@
                        .append("text")
                        .attr("x", WIDTH-430)
                        .attr("y", HEIGHT)
-					   .attr("font-family","Roboto2")
-                       .style("font-size","13px")
+					   .attr("font-family","sans-serif")
+                       .style("font-size","12px")
                        .style("text-anchor", "left")
                        .style("font-weight", "bold")
                       .text("Month-Year");
@@ -239,7 +238,7 @@
                         .attr('fill', 'none');
                     vis.append('svg:path')
                         .attr('d', lineGen(yahoo))
-                        .attr('stroke', 'darkmagenta')
+                        .attr('stroke', 'indigo')
                         .attr('stroke-width', 2)
                         .attr('fill', 'none');
 
