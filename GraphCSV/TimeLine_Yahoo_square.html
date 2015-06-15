@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Yahoo Timeline</title>
+  <title>Yahoo timeline</title>
   <style>
 
 div {
@@ -85,6 +85,86 @@ div {
     transition: all 1s ease;
     background-color: #4B0082;
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}  
+  
+div {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.timeline2 {
+    width: 500px;
+}
+.timeline2 .timeline2-item {
+    width: 90%;
+	margin-left:800px;
+}
+.timeline2 .timeline2-item .info, .timeline2 .timeline2-item .year {
+    color: #eee;
+    display: block;
+    float:left;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.timeline2 .timeline2-item.close .info, .timeline2 .timeline2-item.close .year {
+    color: #ccc;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.timeline2 .timeline2-item .year {
+    font-size: 16px;
+    font-weight: bold;
+    width: 16%;
+}
+.timeline2 .timeline2-item .info {
+    width: 100%;
+    width: 76%;
+    margin-left: -2px;
+    padding: 0 0 40px 35px;
+    border-left: 4px solid #aaa;
+    font-size: 12px;
+    line-height: 16px;
+}
+.timeline2 .timeline2-item .marker {
+    background-color: #fff;
+    border: 4px solid #aaa;
+    height: 18px;
+    width: 18px;
+    display: block;
+    float: right;
+    margin-right: -14px;
+    z-index: 2000;
+    position: relative;
+}
+.timeline2 .timeline2-item.active .info, .timeline2 .timeline2-item:hover .info {
+    color: #444;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.timeline2 .timeline2-item.active .year, .timeline2 .timeline2-item:hover .year {
+    color: #4B0082;
+}
+.timeline2 .timeline2-item .marker .dot {
+    background-color: white;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+    display: block;
+    border: 4px solid white;
+    height: 10px;
+    width: 10px;
+    float: right;
+    z-index: 2000;
+    position: relative;
+}
+.timeline2 .timeline2-item.active .marker .dot, .timeline2 .timeline2-item:hover .marker .dot {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+    background-color: #4B0082;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
   </style>
@@ -95,10 +175,63 @@ div {
 
 <svg height="80" width="300">
   <text x="10" y="20" style="fill:indigo;text-anchor: left; fill: #4B0082; stroke: none; font-size: 18px; font-family:sans-serif;text-decoration: underline; font-weight: bold;">
-  Yahoo Timeline</text>
+  Yahoo timeline</text>
     <text x="10" y="50" style="fill:indigo;text-anchor:left; fill: #808080; stroke: none; font-size: 14px; font-family:sans-serif;font-weight: bold;">
   A little bit of Yahoo's history</text>
 </svg>
+
+<div class="timeline2">
+	<div class="timeline2-item active">
+        <div class="year">1994<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Yahoo was founded Jerry Yang and David Filo.</div>
+    </div>
+	<div class="timeline2-item">
+        <div class="year">1996<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Yahoo goes public.</div>
+    </div>
+    <div class="timeline2-item">
+        <div class="year">1999<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Yahoo buys GeoCities.</div>
+    </div>
+	<div class="timeline2-item">
+        <div class="year">2000<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Dot-Com Boom.</div>
+    </div>
+    <div class="timeline2-item">
+        <div class="year">2004<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Google goes public.</div>
+    </div>
+    <div class="timeline2-item">
+        <div class="year">2005<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Yahoo buys Flickr, Ludicorp and Konfabulator.</div>
+    </div>
+    <div class="timeline2-item">
+        <div class="year">2012<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">CEO Scott Thompson steps down after resumé scandal.</div>
+    </div>
+    <div class="timeline2-item">
+        <div class="year">2012<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Announcement of new CEO Marissa Mayer.</div>
+    </div>
+	<div class="timeline2-item">
+        <div class="year">2012<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Interim CEO Ross Levinsohn leaves Yahoo.</div>
+    </div>
+	<div class="timeline2-item">
+        <div class="year">2013<span class="marker"><span class="dot"></span></span>
+        </div>
+        <div class="info">Yahoo buys Tumblr and Summly.</div>
+    </div>
+</div>
 
 <div class="timeline">
 	<div class="timeline-item active">
@@ -134,7 +267,7 @@ div {
     <div class="timeline-item">
         <div class="year">2012<span class="marker"><span class="dot"></span></span>
         </div>
-        <div class="info">CEO Scott Thompson apologizes and steps down after resumé scandal.</div>
+        <div class="info">CEO Scott Thompson steps down after resumé scandal.</div>
     </div>
     <div class="timeline-item">
         <div class="year">2012<span class="marker"><span class="dot"></span></span>
@@ -152,60 +285,6 @@ div {
         <div class="info">Yahoo buys Tumblr and Summly.</div>
     </div>
 </div>
-
-<svg width="600" height="1000">
-  <rect x="10" y="5" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="25" x2="20" y2="60" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="13" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">The beginning of Yahoo.</text>
-  
-  <rect x="10" y="60" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="80" x2="20" y2="115" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="70" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">Yahoo goes public with a stock price USD 24,25 on April 12,1996 and the highest value was USD 43.</text>
-  
-  <rect x="10" y="115" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="135" x2="20" y2="170" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="127" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">The stock price went from USD 110 on August 1999 to USD 448 on December 1999.</text>
-  
-  <rect x="10" y="170" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="190" x2="20" y2="225" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="180" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">The highest stock price of Yahoo was achieved on April 2000. The stock price was 500,125 USD.</text>
-  
-  <rect x="10" y="225" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="245" x2="20" y2="280" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="235" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">The open stock price was USD 28,34 and the close stock price was USD 28,11 on August 19,2004.</text>
-
-  <rect x="10" y="280" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="300" x2="20" y2="340" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="290" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">On March 21,2005 the open stock price was USD 31,29 and the close stock price was USD 31,62.</text>
-  
-  <rect x="10" y="340" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="360" x2="20" y2="405" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="350" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">The close stock value at the beginning of the month was USD 15,63 and at the end was USD 15,24.</text>
-  
-  <rect x="10" y="405" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="425" x2="20" y2="460" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="410" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">The open stock price on July 2012 increased 1%, while the close stock price stayed the same.</text>
-  
-  <rect x="10" y="460" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="480" x2="20" y2="520" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="470" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">On July 30, 2012 the open stock price was USD 16,15 and the close stock price was USD 15,98.</text>
-  
-  <rect x="10" y="520" width="20" height="20"
-  style="fill:white;stroke:#999999;stroke-width:4;fill-opacity:0.1;stroke-opacity:0.7" />
-  <line x1="20" y1="540" x2="20" y2="575" style="stroke:#999999;stroke-width:2;stroke-width:4" />
-  <text x="50" y="530" style="fill=black; font-size:12px; font-family:sans-serif;fill=#444444">Yahoo stock price increased more than a 6% from the start of May 2013 until the end.</text>
-  
-</svg>
-
 
 </body>
 </html>
